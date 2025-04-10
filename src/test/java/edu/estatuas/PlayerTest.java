@@ -1,18 +1,14 @@
 package edu.estatuas;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
+import static org.junit.Assert.assertEquals;
+
+
 public class PlayerTest {
 
-    /**
-     * Rigorous Test :-)
-     */
+
     @Test
     public void builderPlayerTest() {
 
