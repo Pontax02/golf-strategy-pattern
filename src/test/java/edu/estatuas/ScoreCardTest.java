@@ -43,5 +43,11 @@ public class ScoreCardTest {
 
     }
     @Test
-    public void testScoreCardInitials() {}
+    public void testScoreCardInitials() {
+
+        assertEquals("MJ",playerA.getInitials());
+        assertEquals("PM",playerB.getInitials());
+        assertEquals("MM",playerC.getInitials());
+        assertEquals("BB",playerD.getInitials());
+    }
 }
