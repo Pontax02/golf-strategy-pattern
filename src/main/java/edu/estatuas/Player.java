@@ -9,9 +9,9 @@ public class Player {
         this.handicap = handicap;
     }
     public String getInitials() {
-        return initials;
+        return this.initials;
     }
     public byte getHandicap() {
-        return handicap;
+        return this.handicap;
     }
 }
