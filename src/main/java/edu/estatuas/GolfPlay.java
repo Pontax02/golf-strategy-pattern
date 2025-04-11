@@ -2,5 +2,5 @@ package edu.estatuas;
 
 public interface GolfPlay {
 
-  byte  implementStrategy();
+  byte  implementStrategy(ScoreCard scoreCard);
 }
