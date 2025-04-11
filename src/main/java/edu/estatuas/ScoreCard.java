@@ -10,7 +10,7 @@ public class ScoreCard {
     Optional<Player> playerC = Optional.empty();
     Optional<Player> playerD = Optional.empty();
 
-    public ScoreCard(Optional<Player> playerA, Optional<Player> playerB, Optional<Player> playerC , Optional<Player> playerD) {
+    public ScoreCard() {
 
     }
 
