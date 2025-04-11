@@ -4,18 +4,51 @@ import java.util.Optional;
 
 public class ScoreCard {
     Course course;
-    Optional<String> players = Optional.empty() ;
-    public ScoreCard() {
+
+    Optional<Player> playerA = Optional.empty();
+    Optional<Player> playerB = Optional.empty();
+    Optional<Player> playerC = Optional.empty();
+    Optional<Player> playerD = Optional.empty();
+
+    public ScoreCard(Optional<Player> playerA, Optional<Player> playerB, Optional<Player> playerC , Optional<Player> playerD) {
 
     }
 
     public void setPlayerA(Player playerA) {
-        this.players = Optional.ofNullable(playerA.getInitials());
+        this.playerA = Optional.ofNullable(playerA);
     }
     public void setPlayerB(Player playerB) {
-        this.players = Optional.ofNullable(playerB.getInitials());
+        this.playerB = Optional.ofNullable(playerB);
+    }
+    public void setPlayerC(Player playerC) {
+        this.playerC = Optional.ofNullable(playerC);
+    }
+    public void setPlayerD(Player playerD) {
+        this.playerD = Optional.ofNullable(playerD);
     }
     public void setPlayersCourse(Course course) {
         this.course = course;
+    }
+
+
+
+    public String toString(){
+        return "s";
+    }
+
+    public Optional<Player> getPlayerA() {
+        return playerA;
+    }
+
+    public Optional<Player> getPlayerB() {
+        return playerB;
+    }
+
+    public Optional<Player> getPlayerC() {
+        return playerC;
+    }
+
+    public Optional<Player> getPlayerD() {
+        return playerD;
     }
 }
