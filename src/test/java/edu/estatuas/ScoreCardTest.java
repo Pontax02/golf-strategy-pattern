@@ -20,11 +20,11 @@ public class ScoreCardTest {
 
     @BeforeClass
     public static void ScoreSetup() {
-        Player playerA = new Player("MJ", (byte) 0);
-        Player playerB = new Player("PM", (byte) 0);
-        Player playerC = new Player("MM", (byte) 0);
-        Player playerD = new Player("BB", (byte) 0);
-        ScoreCard scoreCard = new ScoreCard();
+         playerA = new Player("MJ", (byte) 0);
+         playerB = new Player("PM", (byte) 0);
+         playerC = new Player("MM", (byte) 0);
+         playerD = new Player("BB", (byte) 0);
+         scoreCard = new ScoreCard();
         scoreCard.setPlayerA(playerA);
         scoreCard.setPlayerB(playerB);
         scoreCard.setPlayerC(playerC);
