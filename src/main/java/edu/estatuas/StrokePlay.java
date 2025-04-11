@@ -2,12 +2,12 @@ package edu.estatuas;
 
 public class StrokePlay implements GolfPlay {
 
-
+    private Course course;
 
 
     @Override
-    public byte implementStrategy(){
-        return 0;
+    public void implementStrategy(ScoreCard scoreCard){
+
     }
 
 }
