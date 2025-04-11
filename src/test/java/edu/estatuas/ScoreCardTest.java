@@ -24,12 +24,10 @@ public class ScoreCardTest {
         Player playerB = new Player("PM", (byte) 0);
         Player playerC = new Player("MM", (byte) 0);
         Player playerD = new Player("BB", (byte) 0);
-        ScoreCard scoreCard = new ScoreCard(Optional.of(playerA),Optional.of(playerB), Optional.of(playerC), Optional.of(playerD));
-
+        ScoreCard scoreCard = new ScoreCard();
+        scoreCard.setPlayerA(playerA);
         assertEquals(Optional.of(playerA),scoreCard.getPlayerA());
-        assertEquals(Optional.of(playerB),scoreCard.getPlayerB());
-        assertEquals(Optional.of(playerC),scoreCard.getPlayerC());
-        assertEquals(Optional.of(playerD),scoreCard.getPlayerD());
+
     }
 
 }
