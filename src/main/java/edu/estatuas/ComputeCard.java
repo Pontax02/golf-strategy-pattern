@@ -5,9 +5,9 @@ public class ComputeCard {
     private final GolfPlay play;
     private final ScoreCard scoreCard;
 
-    public ComputeCard(GolfPlay play, ScoreCard scoreCard) {
-        this.play = play;
+    public ComputeCard( ScoreCard scoreCard,GolfPlay play) {
         this.scoreCard = scoreCard;
+        this.play = play;
     }
 
 

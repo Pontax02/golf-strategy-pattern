@@ -15,16 +15,16 @@ public class ScoreCard {
     }
 
     public void setPlayerA(Player playerA) {
-        this.playerA = Optional.ofNullable(playerA);
+        this.playerA = Optional.of(playerA);
     }
     public void setPlayerB(Player playerB) {
-        this.playerB = Optional.ofNullable(playerB);
+        this.playerB = Optional.of(playerB);
     }
     public void setPlayerC(Player playerC) {
-        this.playerC = Optional.ofNullable(playerC);
+        this.playerC = Optional.of(playerC);
     }
     public void setPlayerD(Player playerD) {
-        this.playerD = Optional.ofNullable(playerD);
+        this.playerD = Optional.of(playerD);
     }
     public void setPlayersCourse(Course course) {
         this.course = course;
@@ -33,11 +33,11 @@ public class ScoreCard {
 
 
     public String toString(){
-        return "s";
+        return "test \t" + "\n";
     }
 
     public Optional<Player> getPlayerA() {
-        return playerA;
+        return this.playerA;
     }
 
     public Optional<Player> getPlayerB() {
@@ -50,5 +50,8 @@ public class ScoreCard {
 
     public Optional<Player> getPlayerD() {
         return playerD;
+    }
+    public byte[] getPlayerCourse(Player player) {
+        return this.course.getPlayerCourse(player);
     }
 }
