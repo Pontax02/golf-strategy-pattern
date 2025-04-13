@@ -1,5 +1,7 @@
 package edu.estatuas;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class ScoreCard {
@@ -10,9 +12,9 @@ public class ScoreCard {
     Optional<Player> playerC = Optional.empty();
     Optional<Player> playerD = Optional.empty();
 
-    public ScoreCard() {
+    public List<Integer> holes = new ArrayList<Integer>();
 
-    }
+    public ScoreCard() {}
 
     public void setPlayerA(Player playerA) {
         this.playerA = Optional.of(playerA);
@@ -32,9 +34,7 @@ public class ScoreCard {
 
 
 
-    public String toString(){
-        return "test \t" + "\n";
-    }
+
 
     public Optional<Player> getPlayerA() {
         return this.playerA;
@@ -53,5 +53,9 @@ public class ScoreCard {
     }
     public byte[] getPlayerCourse(Player player) {
         return this.course.getPlayerCourse(player);
+    }
+
+    public String toString(){
+        return "test \t" + "\n";
     }
 }
