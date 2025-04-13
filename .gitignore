@@ -1,0 +1,51 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+*.ipr
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Eclipse (si el proyecto se abre allí también)
+.classpath
+.project
+.settings/
+
+# JaCoCo
+jacoco.exec
+jacoco-report/
+
+# Otros binarios
+*.class
+
+# Coverage reports
+coverage/
+*.ec
+
+# Generated docs
+/target/site/
+
+# IDE auto-save files
+*~
+*.swp
+
+# Local env configs
+.env
