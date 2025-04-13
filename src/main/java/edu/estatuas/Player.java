@@ -4,7 +4,10 @@ public class Player {
 
     private final String initials;
     private byte handicap  = 0;
-    public int finalScore;
+
+    private short points = 0;
+    private short score;
+
     public Player(String initials, byte handicap) {
         this.initials = initials;
         this.handicap = handicap;
@@ -17,13 +20,20 @@ public class Player {
         return this.handicap;
     }
     public int getFinalScore() {
-        return this.finalScore;
+        return this.score;
     }
-    public void setFinalScore(int finalScore) {
-        this.finalScore = finalScore;
+
+    void setPoints(int points) {
+        this.points = (short) points;
+    }
+    short getpoints(){
+        return this.points;
+    }
+    void setScore(int score) {
+        this.score = (short) score;
     }
 
     public String toString() {
-        return this.getInitials() + "---> H´cap: " + this.getHandicap() + " Strokes: " + this.getFinalScore() ;
+        return this.getInitials() + "---> H´cap: " + this.getHandicap() + " Strokes: " + this.getFinalScore() + " Stableford Points: " + this.getpoints() ;
     }
 }
