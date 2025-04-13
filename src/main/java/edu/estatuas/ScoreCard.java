@@ -3,6 +3,7 @@ package edu.estatuas;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class ScoreCard {
     Course course;
@@ -12,7 +13,7 @@ public class ScoreCard {
     Optional<Player> playerC = Optional.empty();
     Optional<Player> playerD = Optional.empty();
 
-    public List<Integer> holes = new ArrayList<Integer>();
+    public List<Holes> holes = new ArrayList<Holes>();
 
     public ScoreCard() {}
 
@@ -32,10 +33,6 @@ public class ScoreCard {
         this.course = course;
     }
 
-
-
-
-
     public Optional<Player> getPlayerA() {
         return this.playerA;
     }
@@ -53,6 +50,21 @@ public class ScoreCard {
     }
     public byte[] getPlayerCourse(Player player) {
         return this.course.getPlayerCourse(player);
+    }
+
+    public void addHoles(Byte[] holePar) {
+        byte holeNumber = 1;
+        for(Byte par : holePar) {
+            this.holes.add(new Holes(holeNumber++, par));
+        }
+    }
+
+    public int getNumHoles() {
+        return this.holes.size();
+    }
+
+    public List<Holes> getHoles() {
+        return this.holes;
     }
 
     public String toString(){
