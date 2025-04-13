@@ -1,9 +1,9 @@
 package edu.estatuas;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class ScoreCard {
     Course course;
@@ -33,20 +33,12 @@ public class ScoreCard {
         this.course = course;
     }
 
-    public Optional<Player> getPlayerA() {
-        return this.playerA;
-    }
-
-    public Optional<Player> getPlayerB() {
-        return playerB;
-    }
-
-    public Optional<Player> getPlayerC() {
-        return playerC;
-    }
-
-    public Optional<Player> getPlayerD() {
-        return playerD;
+    List<Player> getPlayers() {
+        return Arrays.asList(playerA, playerB, playerC, playerD)
+                .stream()
+                .filter(player -> player.isPresent())
+                .map(Optional::get)
+                .toList();
     }
     public byte[] getPlayerCourse(Player player) {
         return this.course.getPlayerCourse(player);
